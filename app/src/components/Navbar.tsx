@@ -7,12 +7,12 @@ import { useCart } from '@/app/context/CartContext';
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { items, isOpen, toggleCart, closeCart } = useCart();
-  const cartRef = useRef(null);
+  const cartRef = useRef<HTMLDivElement>(null);
   const totalCount = items.reduce((sum, i) => sum + i.quantity, 0);
 
   useEffect(() => {
-    const handler = (e) => {
-      if (cartRef.current && !cartRef.current.contains(e.target)) closeCart();
+    const handler = (e: MouseEvent) => {
+      if (cartRef.current && !cartRef.current.contains(e.target as Node)) closeCart();
     };
     document.addEventListener('mousedown', handler);
     return () => document.removeEventListener('mousedown', handler);
@@ -102,7 +102,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile right: cart icon + hamburger */}
+        {/* Mobile right: cart + hamburger */}
         <div className="flex md:hidden items-center gap-4">
           <div className="relative" ref={cartRef}>
             <button onClick={toggleCart} className="relative text-white" aria-label="Cart">
