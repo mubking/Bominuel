@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { CartProvider } from './context/CartContext';
 
 export const metadata: Metadata = {
   title: "Bominuel — Healthy. Flavorful. Unapologetically African.",
@@ -12,9 +13,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
-      <body className="min-h-full bg-[#0d0d0d] text-white">
-        {children}
+   <html lang="en">
+      <body>
+        <CartProvider>
+          {children}
+        </CartProvider>
       </body>
     </html>
   );

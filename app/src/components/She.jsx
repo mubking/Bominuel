@@ -2,12 +2,22 @@ import Image from 'next/image';
 
 export default function About() {
   return (
-    <section className="w-full bg-[#F9F8F2] py-14 md:py-20">
- 
+    <section className="w-full min-h-[135vh] md:min-h-screen bg-[#F9F8F2] py-14 md:py-20 relative overflow-hidden">
+
+      {/* Green leaf decoration */}
+      <div className="absolute -bottom-10 -left-8 w-[180px] h-[150px]  pointer-events-none opacity-90">
+        <Image
+          src="/green-leaf.png"
+          alt=""
+          fill
+          className="object-contain"
+        />
+      </div>
+
       <div className="max-w-7xl mx-auto px-5">
         <div className="flex flex-col md:flex-row gap-10 items-start">
 
-          {/* Images — stacked on mobile, side by side on desktop */}
+          {/* Images */}
           <div className="w-full md:w-1/2 flex gap-3">
             <div className="w-1/2">
               <Image
@@ -36,7 +46,7 @@ export default function About() {
             </h2>
 
             <p className="text-gray-600 text-base md:text-[18px] leading-relaxed mb-4">
-              Hibiscus drink shows up in homes all over the world. In Nigeria, we call it Zobo. In Senegal Bissap, in Jamaica sorrel, in Mexico Agua de Jamaica. Different names, same magic: a deep red drink that's part celebration, part comfort, part tradition.
+              Hibiscus drink shows up in homes all over the world. In Nigeria, we call it Zobo. In Senegal Bissap, in Jamaica sorrel, in Mexico Agua de Jamaica. Different names, same magic: a deep red drink that&apos;s part celebration, part comfort, part tradition.
             </p>
 
             <p className="text-gray-600 text-base md:text-[18px] leading-relaxed mb-4">
