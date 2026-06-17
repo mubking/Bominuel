@@ -38,13 +38,13 @@ export default function Footer() {
             <h3 className="text-[#FFFFFF] font-bold text-lg mb-3">Help?</h3>
             <ul className="flex flex-col gap-2">
               <li>
-                <Link href="/faq" className="text-[#E1E1E1] text-sm hover:text-white transition">
-                  FAQ
+                <Link href="/policy" className="text-[#E1E1E1] text-sm hover:text-white transition">
+                  Policy
                 </Link>
               </li>
               <li>
                 <Link href="/terms" className="text-[#E1E1E1] text-sm hover:text-white transition">
-                  Term &amp; Condition
+                  Terms &amp; Conditions
                 </Link>
               </li>
             </ul>

@@ -1,10 +1,18 @@
+"use client";
 import Image from 'next/image';
+import { useReveal } from '@/app/src/hooks/useReveal';
+
 
 export default function About() {
+    const { ref, visible } = useReveal();
+
   return (
     <section className="w-full bg-[#F9F8F2] py-14 md:py-20">
- 
-      <div className="max-w-7xl mx-auto px-5">
+      <div
+        ref={ref}
+        className={`max-w-7xl mx-auto px-5 transition-all duration-700 ease-out
+          ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+      >
         <div className="flex flex-col md:flex-row gap-10 items-start">
 
           {/* Images — stacked on mobile, side by side on desktop */}
