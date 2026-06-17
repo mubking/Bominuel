@@ -20,8 +20,8 @@ function ShopList() {
         />
 
         {/* Dark overlay */}
-        <div className="absolute inset-0" style={{ backgroundColor: "" }} />
-
+{/* Dark overlay */}
+<div className="absolute inset-0 bg-black/40" />
         {/* Centered text */}
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
           <h1 className="text-white font-bold text-5xl md:text-6xl tracking-wide">
